@@ -10,9 +10,9 @@ entity BusinessPartners {
 
 entity BusinessPartnerAddress {
     key businessPartner : Integer;
-    key addressId       : Integer;
+    key addressId       : String;
         postalCode      : String;
         cityName        : String;
         streetName      : String;
-        houseNumber     : Integer;
+        houseNumber     : String;
 }
