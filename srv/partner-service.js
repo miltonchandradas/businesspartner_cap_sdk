@@ -49,17 +49,18 @@ module.exports = (srv) => {
     const { businessPartnerAddressApi } =
       businessPartnerService.businessPartnerService();
 
-    const {
-      businessPartner,
-      postalCode,
-      cityName,
-      streetName,
-      houseNumber,
-    } = req.data;
+    const { businessPartner, postalCode, cityName, streetName, houseNumber } =
+      req.data;
 
     const businessPartnerAddress = businessPartnerAddressApi
       .entityBuilder()
-      .fromJson({ businessPartner, postalCode, cityName, streetName, houseNumber });
+      .fromJson({
+        businessPartner,
+        postalCode,
+        cityName,
+        streetName,
+        houseNumber,
+      });
     return businessPartnerAddressApi
       .requestBuilder()
       .create(businessPartnerAddress)
