@@ -1,7 +1,8 @@
 namespace demo;
 
 entity BusinessPartners {
-    key ID        : Integer;
-        firstName : String;
-        lastName  : String;
+    key businessPartner         : Integer;
+        firstName               : String;
+        lastName                : String;
+        businessPartnerCategory : String;
 }
